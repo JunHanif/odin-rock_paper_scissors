@@ -46,6 +46,9 @@ let computerScore = 0;
 
 const container = document.querySelector(".container")
 
+const buttonGroup =document.createElement("div")
+buttonGroup.classList.add("btn-group")
+
 const rockBtn = document.createElement("button");
 rockBtn.textContent = "ROCK";
 
@@ -56,16 +59,22 @@ const scissorBtn = document.createElement("button");
 scissorBtn.textContent = "SCISSOR";
 
 const scoreDiv = document.createElement("div");
+scoreDiv.classList.add("score");
+
 const resultDiv = document.createElement("div");
+resultDiv.classList.add("result");
+
 const winnerDiv = document.createElement("div");
+winnerDiv.classList.add("winner")
 
 const resetBtn = document.createElement("button");
 resetBtn.textContent = "PLAY AGAIN";
 
+buttonGroup.appendChild(rockBtn);
+buttonGroup.appendChild(paperBtn);
+buttonGroup.appendChild(scissorBtn);
 
-container.appendChild(rockBtn);
-container.appendChild(paperBtn);
-container.appendChild(scissorBtn);
+container.appendChild(buttonGroup)
 
 container.appendChild(resultDiv);
 container.appendChild(scoreDiv);
